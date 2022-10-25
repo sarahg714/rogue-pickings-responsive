@@ -243,3 +243,18 @@ footer span {
 		padding: 0;
 		display: flex;
 		flex-flow: row nowrap;
+	}
+
+	.bottom-section {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}

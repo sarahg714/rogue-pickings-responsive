@@ -40,7 +40,7 @@ h3 {
 p {
 	font-size: 0.875em;
 	line-height: 1.3125em;
-    padding: 0 1.875em;
+    /*-- padding: 0 1.875em; --*/
 }
 
 /*The widths are in a percentage!*/
@@ -51,14 +51,16 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-flow: column wrap;
+	text-align: center;
 }
 
 header h1 {
-	margin: 0;
+
 	align-items: flex-start;
 	border-bottom: 0.1875em solid #77a466;
 	width: 100%;
-	text-align: center;
+	padding-bottom: 0.3125em;
+
 }
 header h1 span {
 	color: #77a466;
@@ -93,7 +95,7 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-	margin: 0 auto;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -123,28 +125,18 @@ header nav ul li a{
 .section-two,
 .section-three {
 	width: 100%;
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: center;
-	align-items: center;
 }
 
 .section-one {
 	border-top: 0.0625em solid #eee;
 }
-.section-one h3 {
-	padding: 0.625em 0;
-}
+
 
 .section-two {
 	border-top: 0.0625em solid #eee;
 	border-bottom: 0.0625em solid #eee;
 }
 
-.section-two h3,
-.section-three h3 {
-	padding: 0.625em 1.875em;
-}
 
 .menu {
 	list-style: none;
@@ -185,20 +177,14 @@ footer span {
 /*------beginning of media queries for tablet and desktop ----*/
 
 @media (min-width: 768px) { /*----tablet media ---*/
-	.section-one,
-	.section-two,
-	.section-three {
-		width: 33%;	
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: center;
-		align-items: center;
-		
-	}
 
 	.bottom-section {
 		border-top: 0.1875em solid #eee;
-
+		width: 100%;	
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: flex-start;
 	}
 
 	.section-one {
@@ -210,7 +196,11 @@ footer span {
 		border-left: 0.0625em solid #eee;
 		border-right: 0.0625em solid #eee;
 		border-bottom: 0;
+		padding-left: 0.625em;
+	}
 
+	.section-three {
+		padding-left: 0.625em;
 	}
 }
 
@@ -250,11 +240,4 @@ footer span {
 		justify-content: flex-start;
 		align-items: flex-start;
 	}
-
-	.section-one,
-	.section-two,
-	.section-three {
-		display: flex;
-		justify-content: flex-start;
-		align-items: flex-start;
-	}
+}
